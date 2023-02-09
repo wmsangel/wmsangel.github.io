@@ -1,0 +1,41 @@
+.icon {
+    display: inline-flex;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &-qiwi {
+        background-image: url('../img/i-qiwi.svg');
+        width: 21px;
+        height: 20px;
+    }
+
+    &-ya {
+        background-image: url('../img/i-ya.svg');
+        width: 21px;
+        height: 20px;
+    }
+
+    &-wm {
+        background-image: url('../img/i-wm.svg');
+        width: 21px;
+        height: 20px;
+    }
+
+    &-vk {
+        background-image: url('../img/i-vk.svg');
+        width: 21px;
+        height: 20px;
+    }
+
+    &-email {
+        background-image: url('../img/i-email.svg');
+        width: 21px;
+        height: 20px;
+    }
+
+    &-file {
+        background-image: url('../img/i-file.svg');
+        width: 18px;
+        height: 21px;
+    }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "loren",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "browsersync": "browser-sync start --proxy \"loren.local/src/\" --files \"src/css/*.css\", src/*.html, \"src/js/*.js\"",
+    "watch:css": "node-sass src/scss -wo src/css",
+    "minifyHTML": "html-minifier --input-dir src/ --output-dir build/ --file-ext html --collapse-whitespace --remove-comments --remove-optional-tags --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true",
+    "minifyCSS": "node-sass src/scss -o src/css --output-style compressed",
+    "build": "npm run minifyCSS & npx postcss src/css/*.css --use autoprefixer -d build/css/  & npm run minifyHTML ",
+    "dev": "npm run browsersync & npm run watch:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wmsangel/loren.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wmsangel/loren/issues"
+  },
+  "homepage": "https://github.com/wmsangel/loren#readme",
+  "dependencies": {
+    "autoprefixer": "^10.4.13",
+    "browser-sync": "^2.27.11",
+    "html-minifier": "^4.0.0",
+    "html-minifier-terser": "^7.1.0",
+    "node-sass": "^8.0.0",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 3 version"
+  ]
+}
